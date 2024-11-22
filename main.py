@@ -21,8 +21,10 @@ class RequestHandler(BaseHTTPRequestHandler):
             print("hi")
             sleep(3)
             print("allocating...")
-            xd = bytearray(4512000000)
-            print("allocated")
+            xd = []
+            for i in range(10000):
+                xd.append(bytearray(512000000 + i))
+                print("allocated 512Mb")
             sleep(1)
             print(len(xd))
 
