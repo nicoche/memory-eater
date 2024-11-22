@@ -21,12 +21,11 @@ class RequestHandler(BaseHTTPRequestHandler):
             print("hi")
             sleep(3)
             print("allocating...")
-            xd = []
-            for i in range(10000):
-                xd.append(bytearray(512000000 + i))
-                print("allocated 512Mb")
+            var=[]
+            for x in range(99999999999):
+                var.append(str(x))
             sleep(1)
-            print(len(xd))
+            print(len(var))
 
         response = {"message": "Hello world"}
         self.send_response(200)
